@@ -29,3 +29,14 @@ Analizzando i dati ottenuti da "DemoDict.py" osserviamo che, come previsto, le o
 hanno tempi di esecuzioni molto simili. Tuttavia, si nota che, mentre 'search' e 'boolDelete' hanno tempi pressochè identici
 (dovuti al fatto che, come gia detto, la seconda si serve proprio della prima), 'insert' è la più lenta delle tre, per la 
 maggiore quantità di dati utilizzati: creazione di nodi(chiave, valore) e alberi(nodi).
+
+Un'ultima cosa che si nota è che i tempi di esecuzioni delle operazioni non risentono del tipo di impiego:
+- search di elementi esistenti, non esistenti o eliminati;
+- boolDelete di elementi non eliminati o già eliminati;
+- insert di nuovi elementi o elementi a sostituzione di elementi eliminati.
+In ogni caso ogni operazione ha lo stesso tempo di esecuzione.
+
+Casi pratici in cui è vantaggioso utilizzare la classe dizionario di alberi di ricerca con lazy deletion potrebbero essere
+casi in cui sia necessario tenere conto delle varie eliminazioni e visualizzarle nell'albero, o casi in cui le eliminazioni 
+non siano permanenti, magari estendendo ulteriormente la classe con un'operazione 'recover' che riporta lo 'status' di un 
+elemento "eliminato" al valore standard.
