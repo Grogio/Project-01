@@ -4,7 +4,7 @@ Prima prova pratica in itinere, corso di Ingegneria degli Algoritmi.
 La classe 'DictBinaryTreeLazyDel' implementata in "DictionaryBST_LazyDel.py" è basata sulla classe dizionario 
 per alberi binari di ricerca. L'unico attributo che la classe presenta è 'tree', ovvero l'albero binario
 formato dalle coppie (key, value) del nostro dizionario e implementato in "BinaryTree.py". La classe 'BinaryNode' 
-è stata estesa in 'BinaryNodeLazyDel' aggiungendo un attributo aggiuntivo 'status' che indica appunto lo stato del nodo: 
+è stata estesa a 'BinaryNodeLazyDel' aggiungendo un attributo aggiuntivo 'status' che indica appunto lo stato del nodo: 
 "eliminato" oppure no.
 
 Le operazioni base 'key' e 'value' rimangono le stesse della classe dizionario priva di lazy deletion ed operano in 
