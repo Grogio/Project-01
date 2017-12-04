@@ -28,7 +28,7 @@ class DictBinaryTreeLazyDel:
             return None
         return node.info[1]
         
-    def search(self, key): #Tempo di esecuzione O(logn)
+    def search(self, key): #Tempo di esecuzione O(h)
         """Ricerca il nodo con chiave key all'interno del dizionario.
            Ritorna il nodo, oppure None se non esiste un nodo associato a key
            o se il nodo e' segnato come "eliminato"."""
@@ -51,7 +51,7 @@ class DictBinaryTreeLazyDel:
 
         return None
 
-    def boolDelete(self, key): #Tempo di esecuzione O(logn)
+    def boolDelete(self, key): #Tempo di esecuzione O(h)
         """Verifica se il nodo con chiave key e' segnato come "eliminato".
            Se non lo e', viene segnato come tale e ritorna True.
            Se invece e' gia segnato come "eliminato" oppure il nodo non esiste ritorna False."""
@@ -62,7 +62,7 @@ class DictBinaryTreeLazyDel:
             toRemove.status = False
             return True
 
-    def insert(self, key, value): #Tempo di esecuzione O(logn)
+    def insert(self, key, value): #Tempo di esecuzione O(h)
         """Permette di inserire una coppia (key, value) all'interno del dizionario nella
            maniera corretta. Se e' possibile inserire il nodo con chiave key nella posizione
            di un nodo segnato come eliminato, quest'ultimo viene sostituito con quello nuovo."""
