@@ -34,6 +34,7 @@ Un'ultima cosa che si nota è che i tempi di esecuzioni delle operazioni non ris
 - search di elementi esistenti, non esistenti o eliminati;
 - boolDelete di elementi non eliminati o già eliminati;
 - insert di nuovi elementi o elementi a sostituzione di elementi eliminati.
+
 In ogni caso ogni operazione ha lo stesso tempo di esecuzione.
 
 Casi pratici in cui è vantaggioso utilizzare la classe dizionario di alberi di ricerca con lazy deletion potrebbero essere
