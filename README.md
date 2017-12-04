@@ -15,18 +15,17 @@ corrispondente a quella da ricercare. A seconda dell'esito del controllo sullo '
 (il nodo non è "eliminato") oppure 'None' (il nodo è "eliminato"). L'operazione 'search' opera in tempo O(h) con h altezza
 dell'albero, che può diventare O(n) per alberi molto sbilanciati.
 
-L'operazione 'boolDelete' risulta invece più semplice della vecchia operazione di 'delete', poichè dopo aver segnato
+L'operazione 'boolDelete' risulta invece più semplice della vecchia operazione 'delete', poichè dopo aver segnato
 l'elemento come "eliminato" non c'è più bisogno di ripristinare la proprietà di ricerca dell'albero andando a cercare
-il predecessore. Anche l'operazione di 'boolDelete' opera in tempo O(h) in quanto si basa sulla precedente operazione 
-di 'search' sul nodo da eliminare.
+il predecessore. Anche l'operazione di 'boolDelete' opera in tempo O(h) in quanto si basa sulla precedente operazione  'search' sul nodo da eliminare.
 
 All'operazione 'insert', come per l'operazione 'search', viene aggiunta una riga di controllo sullo 'status' del nodo con
 chiave corrispondente a quella del nuovo nodo da inserire. Se il controllo ha esito positivo (ovvero il nodo è segnato
 come "eliminato") quest'ultimo viene sostituito con il nuovo nodo da inserire, mentre per un controllo con esito negativo
-(il nodo non è segnato come "eliminato) procede come per la vecchia operazione di 'insert'. Anche quest'ultima operazione
+(il nodo non è segnato come "eliminato) procede come per la vecchia operazione 'insert'. Anche quest'ultima operazione
 ha tempo di esecuzione O(h).
 
-Analizzando i dati ottenuti da "DemoDict.py" osserviamo che, come previsto, le operazioni di 'search', 'boolDelete' e 'insert'
+Analizzando i dati ottenuti da "DemoDict.py" osserviamo che, come previsto, le operazioni 'search', 'boolDelete' e 'insert'
 hanno tempi di esecuzioni molto simili. Tuttavia, si nota che, mentre 'search' e 'boolDelete' hanno tempi pressochè identici
 (dovuti al fatto che, come gia detto, la seconda si serve proprio della prima), 'insert' è la più lenta delle tre, per la 
-maggiore quantità di dati utilizzati: creazione di nodi(chiave, valore)e alberi(nodi).
+maggiore quantità di dati utilizzati: creazione di nodi(chiave, valore) e alberi(nodi).
