@@ -108,6 +108,10 @@ if __name__ == "__main__":
     print("insert(4,8)")
     diz.insert(4, 8)
     diz.tree.stampa()
+    
+    print("insert(3,7)")
+    diz.insert(3, 7)
+    diz.tree.stampa()
 
     print("insert(3,6)")
     diz.insert(3, 6)
@@ -144,10 +148,6 @@ if __name__ == "__main__":
 
     print("boolDelete(3)")
     print(diz.boolDelete(3))
-    diz.tree.stampa()
-    
-    print("boolDelete(1)")
-    print(diz.boolDelete(1))
     diz.tree.stampa()
     
     print("boolDelete(8)")
