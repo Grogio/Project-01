@@ -56,7 +56,7 @@ class DictBinaryTreeLazyDel:
            Se non lo e', viene segnato come tale e ritorna True.
            Se invece e' gia segnato come "eliminato" oppure il nodo non esiste ritorna False."""
         toRemove = self.search(key)
-        if toRemove == None or toRemove.status == False:
+        if toRemove == None:
             return False
         else:
             toRemove.status = False
