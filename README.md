@@ -32,9 +32,9 @@ hanno tempi di esecuzioni molto simili. Tuttavia, si nota che, mentre 'search' e
 maggiore quantità di dati utilizzati: creazione di nodi(chiave, valore) e inserimento di sottoalberi.
 
 Un'ultima cosa che si nota è che i tempi di esecuzioni delle operazioni non risentono del tipo di impiego:
-- search di elementi esistenti, non esistenti o eliminati;
-- boolDelete di elementi non eliminati o già eliminati;
-- insert di nuovi elementi, elementi esistenti o elementi esistenti ed eliminati.
+- elementi esistenti;
+- elementi non esistenti;
+- elementi "eliminati".
 
 In ogni caso ciascuna operazione ha lo stesso tempo di esecuzione.
 
