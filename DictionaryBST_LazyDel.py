@@ -7,12 +7,18 @@ class DictBinaryTreeLazyDel:
        presa da un dominio totalmente ordinato;
     2. tutte le chiavi del sottoalbero destro di v sono >= chiave(v);
     3. tutte le chiavi del sottoalbero sinistro di v sono <= chiave(v).
-       Inoltre, per la proprieta' di lazy deletion, ogni nodo puo' essere segnato
+       
+       Per la proprieta' di lazy deletion, ogni nodo puo' essere segnato
        come "eliminato" e risulta tale in operazioni di ricerca all'interno dell'albero,
        pur rimanendo accessibile all'utente.
        Quando viene inserito un nuovo nodo con la stessa chiave di un nodo gia'
        presente nell'albero e segnato come "eliminato", quest'ultimo viene fisicamente
-       eliminato e sostituito con il nuovo nodo."""
+       eliminato e sostituito con il nuovo nodo.
+       
+       Inoltre, poichè si tratta di un dizionario, tutte le chiavi sono distinte.
+       Dunque, l'inserimento di un nuovo nodo con chiave k gia' presente nel
+       dizionario comporta la sostituzione del precedente nodo con quello nuovo."""
+    
     def __init__(self):
         self.tree = BinaryTree()
 
@@ -63,9 +69,9 @@ class DictBinaryTreeLazyDel:
             return True
 
     def insert(self, key, value): #Tempo di esecuzione O(h)
-        """Permette di inserire una coppia (key, value) all'interno del dizionario nella
-           maniera corretta. Se e' possibile inserire il nodo con chiave key nella posizione
-           di un nodo segnato come eliminato, quest'ultimo viene sostituito con quello nuovo."""
+        """Permette di inserire una coppia (key, value) all'interno del dizionario mantenendo
+        la proprieta' di ricerca. Se esiste gia' un nodo con chiave k, esso viene sostituito
+        da quello nuovo."""
         pair = [key, value]
         newNode = BinaryNodeLazyDel(pair)
         newTree = BinaryTree(newNode)
@@ -77,17 +83,17 @@ class DictBinaryTreeLazyDel:
             pred = None
             while curr != None:
                 pred = curr
-                if key == self.key(curr) and curr.status == False:
+                if key == self.key(curr):
                     curr.info = pair
                     curr.status = True
                     return
                 else:
-                    if key <= self.key(curr):
+                    if key < self.key(curr):
                         curr = curr.leftSon
                     else:
                         curr = curr.rightSon
 
-            if key <= self.key(pred):
+            if key < self.key(pred):
                 self.tree.insertAsLeftSubTree(pred, newTree)
             else:
                 self.tree.insertAsRightSubTree(pred, newTree)
