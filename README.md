@@ -36,7 +36,7 @@ Un'ultima cosa che si nota è che i tempi di esecuzioni delle operazioni non ris
 - elementi non esistenti;
 - elementi "eliminati".
 
-In ogni caso ciascuna operazione ha lo stesso tempo di esecuzione.
+In ogni caso ciascuna operazione ha lo stesso tempo medio di esecuzione.
 
 Casi pratici in cui è vantaggioso utilizzare la classe dizionario di alberi di ricerca con lazy deletion potrebbero essere
 casi in cui sia necessario tenere conto delle varie eliminazioni e visualizzarle nell'albero, o casi in cui le eliminazioni 
