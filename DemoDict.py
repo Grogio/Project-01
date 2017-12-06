@@ -10,7 +10,7 @@ def testDictLazyDel(steps):
     for i in range (steps):
         diz.insert(2*i, i)
     elapsed = time() - start
-    print("Tempo medio insert nuovi elementi:", elapsed / steps)
+    print("Tempo medio insert elementi non esistenti:", elapsed / steps)
     
     start = time()
     for i in range (steps):
@@ -34,13 +34,19 @@ def testDictLazyDel(steps):
     for i in range (steps):
         diz.boolDelete(2*i)
     elapsed = time() - start
-    print("Tempo medio boolDelete elementi non eliminati:", elapsed / steps)
+    print("Tempo medio boolDelete elementi esistenti:", elapsed / steps)
+    
+    start = time()
+    for i in range (steps):
+        diz.boolDelete(2*i + 1)
+    elapsed = time() - start
+    print("Tempo medio boolDelete elementi non esistenti:", elapsed / steps)
 
     start = time()
     for i in range (steps):
         diz.boolDelete(2*i)
     elapsed = time() - start
-    print("Tempo medio boolDelete elementi già eliminati:", elapsed / steps)
+    print("Tempo medio boolDelete elementi eliminati:", elapsed / steps)
 
     start = time()
     for i in range (steps):
@@ -52,7 +58,7 @@ def testDictLazyDel(steps):
     for i in range (steps):
         diz.insert(2*i, i + 2*steps)
     elapsed = time() - start
-    print("Tempo medio insert elementi esistenti ed eliminati:", elapsed / steps)
+    print("Tempo medio insert elementi eliminati:", elapsed / steps)
 
 if __name__ == "__main__":
     steps = 2000
