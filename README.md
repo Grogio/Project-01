@@ -51,4 +51,4 @@ ogni volta la proprietà di ricerca dell'albero. Oppure casi in cui sia necessar
 visualizzarle nell'albero, o anche casi in cui le eliminazioni non siano permanenti, magari estendendo ulteriormente la classe
 con un'operazione 'recover' che riporta lo 'status' di un elemento "eliminato" al valore standard.
 
-          ###### Giorgio Urbani 0241220
+   #### Giorgio Urbani 0241220
