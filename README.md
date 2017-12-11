@@ -50,3 +50,5 @@ casi in cui si abbia a che fare con un numero elevato di eliminazioni, dunque si
 ogni volta la proprietà di ricerca dell'albero. Oppure casi in cui sia necessario tenere conto delle varie eliminazioni e
 visualizzarle nell'albero, o anche casi in cui le eliminazioni non siano permanenti, magari estendendo ulteriormente la classe
 con un'operazione 'recover' che riporta lo 'status' di un elemento "eliminato" al valore standard.
+
+### Giorgio Urbani 0241220
