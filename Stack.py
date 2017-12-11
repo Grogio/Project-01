@@ -47,5 +47,4 @@ if __name__ == "__main__":
 
     s = PilaArrayList()
     testStack(s)
-    
-    
+   
