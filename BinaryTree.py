@@ -147,3 +147,5 @@ if __name__ == "__main__":
     print('status(nodo1) = "delete":')
     alb1.stampa()
       
+      
+# Giorgio Urbani 0241220
