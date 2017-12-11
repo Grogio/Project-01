@@ -63,3 +63,6 @@ def testDictLazyDel(steps):
 if __name__ == "__main__":
     steps = 2000
     testDictLazyDel(steps)
+
+    
+# Giorgio Urbani 0241220
