@@ -159,3 +159,6 @@ if __name__ == "__main__":
     print("insert(3,7)")
     diz.insert(3, 7)
     diz.tree.stampa()
+
+    
+# Giorgio Urbani 0241220
