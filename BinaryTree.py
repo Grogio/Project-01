@@ -144,7 +144,7 @@ if __name__ == "__main__":
     alb1.stampa()
 
     alb1.root.status = False
-    print("delete(nodo1):")
+    print('status(nodo1) = "delete":')
     alb1.stampa()
 
 
