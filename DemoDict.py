@@ -4,7 +4,7 @@ from time import time
 def testDictLazyDel(steps):
     diz = DictBinaryTreeLazyDel()
 
-    print("Test di DictBinaryTreeLazyDel (tempo medio per ogni operazione, calcolato su ", steps, " chiamate)")
+    print("Test di DictBinaryTreeLazyDel (tempo medio per ogni operazione, calcolato su", steps, "chiamate)")
 
     start = time()
     for i in range (steps):
